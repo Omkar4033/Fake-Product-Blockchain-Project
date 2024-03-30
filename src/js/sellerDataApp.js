@@ -47,7 +47,9 @@ App = {
             }
 
             var account=accounts[0];
-            // console.log(account);
+            
+
+            
 
             App.contracts.product.deployed().then(function(instance){
 
@@ -63,7 +65,7 @@ App = {
                 var sellerNum=[];
                 var sellerManager=[];
                 var sellerAddress=[];
-                // console.log(result);
+                 console.log(result);
                 
                 for(var k=0;k<result[0].length;k++){
                     sellerId[k]=result[0][k];

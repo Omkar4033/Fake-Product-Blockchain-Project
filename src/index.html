@@ -1,90 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-  	<title>Fake Product Identification</title>
+<head>
+    <title>Fake Product Identification</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Additional CSS for overlaying content on image */
+        .content-overlay {
+            position: relative;
+            color: white;
+            z-index: 1; /* Ensure the content is on top of the image */
+        }
 
-	</head>
-	<body>
-	<section class="ftco-section">
-		<div class="container-fluid px-md-5">
-			<div class="row justify-content-between">
-				<div class="col-md-8 order-md-last">
-					<div class="row">
-						<div class="col-md-6 text-center">
-							<!-- <h1>Blockchain </h1> -->
-							<a class="navbar-brand" href="index.html">Fake Product Identification <span>through Blockchain</span></a>
-						</div>
-						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
-							<form action="#" class="searchform order-lg-last">
-			        </form>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex">
-					<div class="social-media">
-		    		
-	        </div>
-				</div>
-			</div>
-		</div>
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container-fluid">
-	    
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="fa fa-bars"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-			  	<li class="nav-item "><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
-	        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
-	          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+        .fullscreen-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height to cover the entire viewport vertically */
+    overflow: hidden; /* Hide any overflow from the image */
+}
 
+.bg-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure the image is behind the content */
+}
 
-	</section>
+    </style>
+</head>
+<body>
 
-	<div class="container-fluid px-md-5">
-		<div class="row justify-content-between">
-			<div class="col-md-12 order-md-last">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<!-- <a class="navbar-brand" href="index.html">WELCOME </a> -->
-					</div>
-					<center><img src="https://cdn.pixabay.com/photo/2017/10/15/09/47/block-chain-2853054_1280.jpg" height="300" width="1350"></center>
-					<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
-						
-						<form action="#" class="searchform order-lg-last">
-				  
-				</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 d-flex">
-				<div class="social-media">
-				
-		</div>
-	</div>
-	</section> 
+<section class="ftco-section">
+    <div class="container-fluid px-md-5">
+        <div class="row justify-content-between">
+            <div class="col-md-8 order-md-last">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <a class="navbar-brand" href="index.html">Fake Product Identification <span>through Blockchain</span></a>
+                    </div>
+                    <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                        <form action="#" class="searchform order-lg-last">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="social-media">
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><span class="material-symbols-outlined">home</span></a></li>
+                    <li class="nav-item "><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+                    <li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+                    <li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/web3.min.js"></script>
-	<script src="js/truffle-contract.js"></script>
- 
-	</body>
+<main class="content-overlay">
+    <div class="fullscreen-bg">
+        <img src="images/home.jpg" alt="Blockchain Technology" class="bg-image">
+    </div>
+    <section class="intro">
+        <h2>Welcome to Fake Product Identification</h2>
+        <p>This platform leverages blockchain technology to provide a secure and transparent way to verify the authenticity of products. Our goal is to combat counterfeit goods and ensure consumer trust.</p>
+    </section>
+	<section class="why-blockchain">
+        <h2>Why Blockchain?</h2>
+        <p>Blockchain's decentralized and immutable ledger ensures transparency and trust in product verification, making it ideal for combating counterfeit goods.</p>
+    </section>
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <p>Manufacturers register their products on the blockchain, creating a transparent record of each item's origin and journey through the supply chain. Consumers can verify product authenticity using a simple scan.</p>
+    </section>
+    <section class="get-involved">
+        <h2>Get Involved</h2>
+        <p>Join us in the fight against counterfeit products. Whether you're a manufacturer, seller, or consumer, your participation is crucial in creating a safer marketplace for all.</p>
+    </section>
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+
+</body>
 </html>
-
-
-
-

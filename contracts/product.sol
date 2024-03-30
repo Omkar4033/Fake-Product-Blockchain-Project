@@ -2,8 +2,8 @@ pragma solidity ^0.8.12;
 
 contract product {
 
-    uint256 sellerCount;
-    uint256 productCount;
+    uint256 sellerCount=0;
+    uint256 productCount=0;
 
     struct seller{
         uint256 sellerId;

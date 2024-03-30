@@ -8367,3 +8367,54 @@ h1, h2, h3, h4, h5,
   border: 1px solid rgba(0, 0, 0, 0.1); }
   .form-control:focus, .form-control:active {
     border-color: #000; }
+
+
+  /* new Design */
+
+  main {
+    margin-top: 20px;
+    background: #ffffff; /* Light background for the main content area */
+    padding: 20px; /* Add some padding around the content */
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow around the main content area */
+}
+
+main h2, main h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+main p {
+    font-size: 16px; /* Slightly larger font for readability */
+    line-height: 1.6; /* Improved line spacing */
+    color: #555; /* Slightly softer text color */
+    margin-bottom: 20px; /* Add more space between paragraphs */
+}
+
+section {
+    margin-bottom: 40px; /* Increase spacing between sections for better separation */
+}
+
+/* Specific styling for each section to differentiate them visually */
+.intro {
+    background: #f9f9f9; /* Light background for intro section */
+    padding: 20px;
+    border-left: 4px solid #007bff; /* Highlight color for the intro section */
+}
+
+.why-blockchain, .how-it-works, .get-involved {
+    padding: 20px;
+    background: #e9ecef; /* Slightly different background for other sections */
+    border-left: 4px solid #17a2b8; /* Different highlight color for these sections */
+}
+
+/* Adjustments for better visual hierarchy */
+h2 {
+    font-size: 22px; /* Larger font size for section titles */
+    margin-bottom: 15px; /* Space below section titles */
+}
+
+h3 {
+    font-size: 20px; /* Distinct size for sub-headings, slightly smaller than h2 */
+    margin-bottom: 10px; /* Space below sub-headings */
+}

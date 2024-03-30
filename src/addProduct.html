@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/qr_code_box.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 	</head>
 	<body>
@@ -40,22 +41,27 @@
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-			  	<li class="nav-item "><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
-	        	<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
-	          	<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+			<ul class="navbar-nav m-auto">
+				<li class="nav-item"><a href="addProduct.html" class="nav-link">Add Product</a></li>
+				<li class="nav-item "><a href="addSeller.html" class="nav-link">Add Seller</a></li>
+				
+				<li class="nav-item"><a href="sellProductManufacturer.html" class="nav-link">Sell Product To Seller</a></li>
+				<li class="nav-item"><a href="querySeller.html" class="nav-link">Query Seller</a></li>
+	        	<li class="nav-item"><a href="index.html" class="nav-link">
+					<span class="material-symbols-outlined">
+						undo
+						</span>
+				</a></li>
+
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-    <!-- END nav -->
 
 	</section>
     <section>
         <div class="container">
             <h2>Add Product</h2>
-
 
 
 			<div class="matrix">
@@ -112,7 +118,6 @@
           </div>
     </section>
 
-<!-- <br></br>	 -->
 	<div class="qr-code">
 		<div align="center">
 			<img align="center" hidden id="imgQR" src="" alt="qr-code" >
@@ -138,25 +143,18 @@
 	var src;
 	var qrValue;
 	function fetchQR(){
-		qrValue = document.getElementById('productSN').value;
-		qrImage = document.querySelector(".qr-code");
-		qrImageResult = qrImage.querySelector("img");
-		src = qrImageResult.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
-		
-
-		downloadQrImg = document.getElementById('imgQR');
-		downloadQrBtn = document.getElementById('download');
-		downloadQrImg.removeAttribute('hidden');
-		downloadQrBtn.removeAttribute('hidden');
-
+		qrValue = $('#productSN').val();
+		src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrValue;
+		$('#imgQR').attr('src', src);
+		$('#imgQR').removeAttr('hidden');
+		$('#download').removeAttr('hidden');
 	}
 
 	function saveImage(){
-		saveAs(src,qrValue);
-		downloadQrImg.setAttribute('hidden', 'hidden');
-		downloadQrBtn.setAttribute('hidden', 'hidden');
+		saveAs(src, "QRCode.png");
 	}
+
 	</script>
 
-  </body>
+</body>
 </html>
